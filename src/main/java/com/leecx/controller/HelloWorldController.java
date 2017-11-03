@@ -3,10 +3,9 @@ package com.leecx.controller;
 import java.util.Date;
 
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.itzixi.common.utils.LeeJSONResult;
+import com.pojo.LeeJSONResult;
 import com.pojo.User;
 
 @RestController
@@ -39,6 +38,14 @@ public class HelloWorldController {
 		user.setPassword("123456");
 		user.setBirthday(new Date());
 		
+		user.setName("lee123");
+		
 		return user;
+	}
+	
+	@RequestMapping("/reload")
+	public String reload() {
+		
+		return "I am reloading...";
 	}
 }
