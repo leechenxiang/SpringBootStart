@@ -1,4 +1,4 @@
-package com.pojo;
+package com.leecx.pojo;
 
 import java.util.Date;
 
@@ -52,5 +52,4 @@ public class User {
 	public void setRemark(String remark) {
 		this.remark = remark;
 	}
-	
 }

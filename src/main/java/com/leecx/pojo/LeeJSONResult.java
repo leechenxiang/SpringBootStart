@@ -1,4 +1,4 @@
-package com.pojo;
+package com.leecx.pojo;
 
 import java.util.List;
 
