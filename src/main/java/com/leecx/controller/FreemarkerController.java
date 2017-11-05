@@ -5,17 +5,18 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
+@RequestMapping("ftl")
 public class FreemarkerController {
 
-	@RequestMapping("/")
+	@RequestMapping("/index")
     public String index(ModelMap map) {
         map.addAttribute("name", "itzixi");
-        return "index";
+        return "freemarker/index";
     }
 	
 	@RequestMapping("center")
     public String center() {
-        return "center/center";
+        return "freemarker/center/center";
     }
 
 }

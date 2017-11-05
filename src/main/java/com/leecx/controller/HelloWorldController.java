@@ -74,12 +74,4 @@ public class HelloWorldController {
 		return LeeJSONResult.ok(bean);
 	}
 	
-	@RequestMapping("/showerror")
-	public String error() {
-		
-		int a = 1 / 0;
-		
-		return "" + a;
-	}
-
 }
