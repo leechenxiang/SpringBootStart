@@ -1,13 +1,13 @@
 package com.leecx;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-
-import com.leecx.pojo.ConfigResource;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-//@EnableConfigurationProperties({ConfigResource.class})
+@MapperScan(basePackages = "com.leecx.mapper")
+@ComponentScan(basePackages= {"com.leecx", "org.n3r.idworker"})
 public class Application {
 
 	public static void main(String[] args) {

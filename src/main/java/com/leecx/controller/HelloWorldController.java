@@ -4,13 +4,14 @@ import java.util.Date;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.ui.ModelMap;
+import org.springframework.context.ApplicationContext;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.leecx.pojo.ConfigResource;
 import com.leecx.pojo.LeeJSONResult;
 import com.leecx.pojo.User;
+import com.leecx.utils.SpringUtil;
 
 @RestController
 public class HelloWorldController {
@@ -23,7 +24,6 @@ public class HelloWorldController {
 	
 	@RequestMapping("/hello")
 	public String Hello() {
-		
 		return "Hello Spring Boot~";
 	}
 	
