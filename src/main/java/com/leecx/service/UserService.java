@@ -22,4 +22,6 @@ public interface UserService {
 	public JqGridResult queryUserListPagedJqgrid(SysUser user, Integer page, Integer pageSize);
 	
 	public SysUser queryUserByIdCustom(String userId);
+	
+	public void saveUserTransactional(SysUser user);
 }
