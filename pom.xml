@@ -84,13 +84,11 @@
             <version>1.1.0</version>
         </dependency>
         
-        
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.41</version>
         </dependency>
-        
 
         <!--mybatis-->
         <dependency>
@@ -124,6 +122,12 @@
             <scope>compile</scope>
             <optional>true</optional>
         </dependency>
+        
+        <!-- 引入 redis 依赖 -->
+        <dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-data-redis</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
