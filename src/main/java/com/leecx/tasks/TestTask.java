@@ -13,7 +13,7 @@ public class TestTask {
 	
 	// 定义每过5秒执行任务
 //    @Scheduled(fixedRate = 5000)
-    @Scheduled(cron="*/5 * * * * *")
+//    @Scheduled(cron="*/5 * * * * *")
     public void reportCurrentTime() {
         System.out.println("现在时间：" + dateFormat.format(new Date()));
     }
