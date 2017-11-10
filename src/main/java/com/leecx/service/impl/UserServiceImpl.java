@@ -29,7 +29,8 @@ public class UserServiceImpl implements UserService {
 	
 	@Override
 	@Transactional(propagation = Propagation.REQUIRED)
-	public void saveUser(SysUser user) {
+	public void saveUser(SysUser user) throws Exception {
+		new Thread().sleep(200);
 		userMapper.insert(user);
 	}
 

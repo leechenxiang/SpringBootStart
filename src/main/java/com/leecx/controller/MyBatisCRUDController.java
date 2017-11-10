@@ -4,6 +4,8 @@ import java.util.Date;
 import java.util.List;
 
 import org.n3r.idworker.Sid;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,6 +19,8 @@ import com.leecx.utils.JqGridResult;
 @RequestMapping("mybatis")
 public class MyBatisCRUDController {
 	
+	final static Logger log = LoggerFactory.getLogger(MyBatisCRUDController.class);
+	
 	@Autowired
 	private UserService userService;
 	
@@ -25,6 +29,8 @@ public class MyBatisCRUDController {
 	
 	@RequestMapping("/saveUser")
 	public LeeJSONResult saveUser() {
+		
+		log.info("保存用户信息, 当前时间: {}", new Date());
 		
 		String userId = sid.nextShort();
 		
@@ -36,7 +42,11 @@ public class MyBatisCRUDController {
 		user.setIsDelete(0);
 		user.setRegistTime(new Date());
 		
-		userService.saveUser(user);
+		try {
+			userService.saveUser(user);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		
 		return LeeJSONResult.ok("保存成功");
 	}

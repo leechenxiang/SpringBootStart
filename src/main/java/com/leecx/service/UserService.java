@@ -7,7 +7,7 @@ import com.leecx.utils.JqGridResult;
 
 public interface UserService {
 
-	public void saveUser(SysUser user);
+	public void saveUser(SysUser user) throws Exception;
 	
 	public void updateUser(SysUser user);
 	
